@@ -1,0 +1,169 @@
+
+
+<div #home class="landing-container" style="background: #100E23;">
+    <!--style="min-height: 1000px;background: url('assets/demo/images/landing/landing-header.jpg') top left no-repeat;background-size: cover;"-->
+    <div id="header" class=" landing-header flex flex-column w-full p-6"  transition-style="in:square:center"
+    style="background-color: aliceblue;">
+        <div class="header-menu-container flex align-items-center justify-content-between">
+            <div class="header-left-elements flex align-items-center justify-content-between">
+                <div class="layout-topbar-logo flex align-items-center" routerLink="/">
+                    <img src="assets/layout/images/In.png" alt="layout" class="logo" style="height: 32px">
+                    <img src="assets/images/1N.png" alt="layout" class="appname ml-2"
+                        style="height: 12px">
+                </div>
+
+                <ul id="menu" style="top: 0px; right: 0%"
+                    class="list-none  ng-hidden lg:flex lg:flex-row flex-column align-items-start bg-white absolute lg:relative h-screen lg:h-auto  lg:surface-ground m-0 z-5 w-full sm:w-6 lg:w-full py-6 lg:py-0">
+                    <a pRipple 
+                        class="cursor-pointer block lg:hidden text-gray-800 font-medium line-height-3 hover:text-gray-800 absolute"
+                        style="top: 3rem; right: 2rem" pStyleClass="@parent" enterFromClass="ng-hidden"
+                        enterActiveClass="px-scalein" leaveToClass="ng-hidden" leaveActiveClass="px-fadeout">
+                        <i class="pi pi-times text-4xl"></i>
+                    </a>
+
+                    <li class="mt-5 lg:mt-0">
+                        <a  (click)="redirectTo('inicio')" pRipple pStyleClass="@grandparent" enterFromClass="ng-hidden"
+                            enterActiveClass="px-fadein" leaveToClass="ng-hidden"
+                            class="flex m-0 lg:ml-5 lg:px-0 px-3 py-3 text-gray-800 font-medium line-height-3 hover:text-gray-800 cursor-pointer">
+                            <span>Inicio</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a (click)="redirectTo('nosotros')"  pRipple pStyleClass="@grandparent" enterFromClass="ng-hidden"
+                            enterActiveClass="px-fadein" leaveToClass="ng-hidden"
+                            class="flex m-0 lg:ml-5 lg:px-0 px-3 py-3 text-gray-800 font-medium line-height-3 hover:text-gray-800 cursor-pointer">
+                            <span>Nosotros</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a   (click)="redirectTo('planes')" pRipple pStyleClass="@grandparent" enterFromClass="ng-hidden"
+                            enterActiveClass="px-fadein" leaveToClass="ng-hidden"
+                            class="flex m-0 lg:ml-5 lg:px-0 px-3 py-3 text-gray-800 font-medium line-height-3 hover:text-gray-800 cursor-pointer">
+                            <span>Planes</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a   pRipple pStyleClass="@grandparent" enterFromClass="ng-hidden"
+                            enterActiveClass="px-fadein" leaveToClass="ng-hidden"
+                            class="flex m-0 md:ml-5 md:px-0 px-3 py-3 text-gray-800 font-medium line-height-3 hover:text-gray-800 cursor-pointer">
+                            <span>Información importante</span>
+                        </a>
+                    </li> 
+
+                </ul>
+            </div>
+
+            <div class="header-right-elements flex align-items-center justify-content-between">
+                <a class="contact-icons font-medium text-gray-700 cursor-pointer" href="https://facebook.com/intinalambrico" target="_blank">
+                    <i class="pi pi-facebook text-gray-700 hover:text-gray-900 mr-3 text-xl"></i>
+                </a>
+
+                <a class="contact-icons font-medium text-gray-700 cursor-pointer" href="https://x.com/@intinalambrico" target="_blank">
+                    <i class="pi pi-twitter text-gray-700 hover:text-gray-900 mr-3 text-xl"></i>
+                </a>
+
+                 
+
+                <a pRipple class="lg:hidden font-medium text-gray-700 cursor-pointer" pStyleClass="#menu"
+                    enterFromClass="ng-hidden" enterActiveClass="px-fadein" leaveToClass="ng-hidden"
+                    leaveActiveClass="px-fadeout" [hideOnOutsideClick]="true">
+                    <i class="pi pi-bars fs-xlarge"></i>
+                </a>
+            </div>
+        </div>
+
+        <div class="grid card grid-nogutter" style="column-gap: 2rem; row-gap: 2rem; background-color: #100E23;">
+            <div class="col-12">
+                <p class="text-900 font-bold">Contacto</p>
+            </div>
+            <div id="map" style="z-index: 1 ;"></div>
+            <!--<div class="col-12 mt-3 h-20rem border-1 surface-border p-0 w-full bg-cover border-round" [ngStyle]="mapStyle">
+                
+            </div>-->
+            <div class="col-12 mt-5">
+                <div class="grid grid-nogutter px-2 flex-column md:flex-row" style="column-gap: 2rem; row-gap: 2rem;">
+                    <div  class="col flex flex-column justify-content-center text-center align-items-center border-1 surface-border py-5 px-4 border-round">
+                        <i class="pi pi-phone"></i>
+                        <span class="text-900 font-bold mt-4 mb-1">Líneas de atención Mesa de ayuda</span>
+                        <span class="text-500">Soporte Técnico Clientes Residenciales 313 348 5835 – 3102442952</span>
+                            <span class="text-500">Soporte Técnico Empresas 317 5103820</span>
+                            <span class="text-900 font-bold mt-4 mb1">Cartera</span>
+                            <span class="text-500">Sede Yopal: 313 348 7096 - 315 532 2365</span>
+                            <span class="text-900 font-bold mt-4 mb1">Sede Aguazul</span>
+                            <span class="text-500">316 0267015</span>
+                            <span class="text-900 font-bold mt-4 mb1">Sede Villanueva</span>
+                            <span class="text-500">316 6289785</span>
+                            <span class="text-900 font-bold mt-4 mb1">Sede Tame - Arauca</span>
+                            <span class="text-500">310 7798931</span>
+                    </div>
+
+                    <div  class="col flex flex-column justify-content-center text-center align-items-center border-1 surface-border py-5 px-4 border-round">
+                        <i class="pi pi-send"></i>
+                        <span class="text-900 font-bold mt-4 mb-1">Correo electrónico</span>
+                            <span class="text-900 font-bold mt-4 mb1">Gerencia</span>
+                            <span class="text-500">gerencia&#64;internetinalambrico.com.co</span>
+                            <span class="text-900 font-bold mt-4 mb1">Dirección de innovación</span>
+                            <span class="text-500">web&#64;internetinalambrico.com.co</span>
+                            <span class="text-900 font-bold mt-4 mb1">Facturación</span>
+                            <span class="text-500">sistemasint&#64;internetinalambrico.com.co </span>
+                            <span class="text-900 font-bold mt-4 mb1">Cartera</span>
+                            <span class="text-500">cartera&#64;internetinalambrico.com.co</span> 
+                            <span class="text-900 font-bold mt-4 mb1">Comercial</span>
+                            <span class="text-500">comercial&#64;internetinalambrico.com.co</span> 
+                    </div>
+
+
+                    <div  class="col flex flex-column justify-content-center text-center align-items-center border-1 surface-border py-5 px-4 border-round">
+                        <i class="pi pi-fw pi-map-marker"></i>
+                        <span class="text-900 font-bold mt-4 mb-1">Dirección sedes</span>
+                        <span class="text-500">Yopal</span>
+                            <span class="text-500">Calle 9 # 22 30 </span> 
+                            <span class="text-900 font-bold mt-4 mb1">Sede Aguazul</span>
+                            <span class="text-500">Calle 11 # 12 – 35</span>
+                            <span class="text-900 font-bold mt-4 mb1">Sede Villanueva</span>
+                            <span class="text-500">Transversal 2 # 9 – 46</span>
+                            <span class="text-900 font-bold mt-4 mb1">Sede Tame - Arauca</span>
+                            <span class="text-500">Calle 16 # 17 – 35</span>
+                    </div>
+
+
+                </div>
+
+                
+            </div>
+        
+            <div class="col-12 mt-5">
+                <p class="text-900 font-bold">Contáctanos</p>
+                <div class="grid flex-column md:flex-row formgrid grid-nogutter mt-6" style="row-gap: 2rem; column-gap: 2rem;">
+                    <div class="field col">
+                        <label for="name" class="block text-indigo-300 font-bold">Nombre</label>
+                        <span class="p-input-icon-left w-full" style="height: 3.5rem;">
+                            <i class="pi pi-user" style="left: 1.5rem;"></i>
+                            <input type="text" pInputText placeholder="Nombre" class="w-full px-7 text-900 font-semibold" [(ngModel)]="name" style="height: 3.5rem"/>
+                        </span>
+                    </div>
+        
+                    <div class="field col">
+                        <label for="email" class="block text-indigo-300 font-bold">Correo</label>
+                        <span class="p-input-icon-left w-full" style="height: 3.5rem;">
+                            <i class="pi pi-envelope" style="left: 1.5rem;"></i>
+                            <input type="text" pInputText placeholder="Correo" class="w-full px-7 text-900 font-semibold" [(ngModel)]="email" style="height: 3.5rem"/>
+                        </span>
+                    </div>
+        
+                    <div class="field col-12 flex flex-column">
+                        <label for="message" class="block text-indigo-300 font-bold">Mensaje</label>
+                        <textarea id="message" rows="5" pInputTextarea class="w-full surface-border p-4 text-900 font-semibold border-round" [autoResize]="true" [(ngModel)]="message"></textarea>
+                        <button pButton class="p-button-primary ml-auto mt-3 border-round" label="Enviar Mensaje" (click)="sendMail()"></button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+   
+
+
+    </div>
+</div>
+
+<p-toast [baseZIndex]="1"></p-toast>
